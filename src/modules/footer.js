@@ -1,4 +1,4 @@
-export const footer = () => {
+function footer () {
   let footer = document.createElement("footer");
   footer.classList.add("footer");
   footer.id = "footer";
@@ -6,14 +6,16 @@ export const footer = () => {
   let i = document.createElement("i");
   let anchor = document.createElement("a");
   anchor.href = "https://github.com/miguelfiguera/Restaurant-Page";
-  anchor.innerText = "gitHub.com";
-  i.classList.add("fab fa-github");
-  p.classList.add("p footer");
-  p.innerText = `Copyright Miguel Figuera's ${anchor}`;
+  anchor.innerText = " gitHub.com";
+  //i.classList.add("fab fa-github");
+  p.classList.add("p-footer");
+  p.innerText = "Copyright Miguel Figuera's ";
 
   footer.appendChild(p);
-  p.appendChild(a);
-  p.appendChild(i);
+  p.appendChild(anchor);
 
-  return { footer };
-};
+  return footer
+}
+
+
+export {footer}

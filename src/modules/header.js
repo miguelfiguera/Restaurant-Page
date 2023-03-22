@@ -1,10 +1,10 @@
-const header = (() => {
-  const populateHeader=()=>{
+function header (){
   let header = document.createElement("header");
   let navbar = document.createElement("nav");
   let headerPicture = document.createElement("img");
   let title = document.createElement("h1");
   title.innerText = "Ten Forward";
+  title.classList.add("title")
   let buttonMenu = document.createElement("button");
   let buttonContact = document.createElement("button");
   let buttonMain = document.createElement("button");
@@ -26,9 +26,10 @@ const header = (() => {
   navbar.appendChild(buttonContact);
 
   header.appendChild(navbar);
-  header.appendChild(headerPicture)};
+  header.appendChild(title)
+  header.appendChild(headerPicture);
 
-  return { populateHeader };
-})();
+  return header;
+};
 
 export {header}

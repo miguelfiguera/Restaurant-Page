@@ -1,7 +1,9 @@
 function menu() {
   let menu = document.createElement("menu");
+  menu.id="the_menu"
   let menutitle=document.createElement('h2')
   menutitle.innerText='Choose your venom...!'
+  menu.classList.add("hidden")
   menu.appendChild(menutitle)
   let dishes = () => {
     let arr = [];
@@ -38,13 +40,17 @@ function menu() {
     "Risan cabernet was a variety of wine produced by the Risans. Really good to drink before, during and after jahamaron...if you know what I mean...";
 
   let chateuPicardImg = document.createElement("img");
-  chateuPicardImg.src = "./src/Pictures/C7_Picard_2386-2-pack-1.png";
+  chateuPicardImg.src = "./Pictures/C7_Picard_2386-2-pack-1.png";
+  chateuPicardImg.classList.add("menuImage")
   let bloodWineImg = document.createElement("img");
-  bloodWineImg.src = "klingonbloodwine.png";
+  bloodWineImg.src = "./Pictures/klingonbloodwine.jpeg";
+  bloodWine.classList.add("menuImage")
   let romulanAleImg = document.createElement("img");
-  romulanAleImg.src = "romulanale.png";
+  romulanAleImg.classList.add("menuImage")
+  romulanAleImg.src = "./Pictures/romulanale.png";
   let risanWineImg = document.createElement("img");
-  risanWineImg.src = "risanwine.png";
+  risanWineImg.classList.add("menuImage")
+  risanWineImg.src = "./Pictures/risanwine.png";
 
   dishesArray[0].appendChild(chateuPicard);
   dishesArray[0].appendChild(chateuPicardImg);

@@ -2,6 +2,8 @@ function header (){
   let header = document.createElement("header");
   let navbar = document.createElement("nav");
   let headerPicture = document.createElement("img");
+  headerPicture.src="./Pictures/tenforward.webp"
+  headerPicture.id="headerPicture"
   let title = document.createElement("h1");
   title.innerText = "Ten Forward";
   title.classList.add("title")
@@ -25,9 +27,11 @@ function header (){
   navbar.appendChild(buttonMenu);
   navbar.appendChild(buttonContact);
 
-  header.appendChild(navbar);
-  header.appendChild(title)
   header.appendChild(headerPicture);
+  header.appendChild(title)
+  header.appendChild(navbar);
+  
+  
 
   return header;
 };
